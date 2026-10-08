@@ -127,8 +127,8 @@ td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
 .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
 
 .checklist{list-style:none;padding:0;margin:12px 0}
-.checklist li{display:flex;gap:12px;padding:12px 14px;border-radius:14px;background:var(--card);border:1px solid var(--line);margin-bottom:8px}
-.checklist li::before{content:"✓";color:var(--ok);font-weight:900}
+.checklist li{position:relative;padding:12px 14px 12px 42px;border-radius:14px;background:var(--card);border:1px solid var(--line);margin-bottom:8px}
+.checklist li::before{content:"✓";color:var(--ok);font-weight:900;position:absolute;left:16px;top:12px}
 
 .sources li{margin:6px 0;font-size:15px}
 footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
