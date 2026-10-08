@@ -73,14 +73,13 @@ nav.seg a{flex:0 0 auto;min-height:44px;display:inline-flex;align-items:center;p
 nav.seg a:focus-visible,.btn:focus-visible,.ph:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 
 section{padding:46px 0 10px}
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow)}
 .card h3{margin-bottom:8px}
 .card ul{margin:6px 0 0;padding-left:20px}
 .card li{margin:4px 0}
 .vhead{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap}
 .vnum{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-weight:800;font-size:22px;color:#fff;flex:0 0 auto}
-.v1 .vnum{background:var(--accent)} .v2 .vnum{background:var(--accent2)}
+.v2 .vnum{background:var(--accent2)}
 
 .cond{display:grid;gap:10px;margin:16px 0}
 .cond div{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
@@ -91,7 +90,6 @@ ol.steps>li{counter-increment:s;position:relative;padding:0 0 22px 58px}
 ol.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--chip);border:2px solid var(--line)}
 ol.steps>li::after{content:"";position:absolute;left:19px;top:44px;bottom:4px;width:2px;background:var(--line)}
 ol.steps>li:last-child::after{display:none}
-.v1 ol.steps>li::before{border-color:var(--accent);color:var(--accent)}
 .v2 ol.steps>li::before{border-color:var(--accent2);color:var(--accent2)}
 .steps h3{font-size:18px;margin:8px 0 4px}
 .sign{display:inline-block;font:600 14px/1.3 -apple-system,BlinkMacSystemFont,sans-serif;background:#0f4fa8;color:#fff;padding:4px 9px;border-radius:6px;margin:2px 2px 2px 0}
@@ -145,7 +143,6 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 .lb .cnt{position:absolute;top:24px;left:20px;color:#bbb;font-size:14px}
 
 @media (max-width:720px){
-  .compare{grid-template-columns:1fr}
   .save{grid-template-columns:1fr 1fr}
   .flight .pt b{font-size:22px}
   .flight .mid .bar{width:40px}
@@ -160,7 +157,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 <header class="hero wrap reveal">
   <span class="eyebrow">Аэропорт Стамбула · IST · 16 октября 2026</span>
   <h1>Посылка в ячейке IST: как забрать на пересадке</h1>
-  <p class="lead">Посылку оставляют в ячейке хранения, а через сутки руководитель забирает её во время пересадки в Стамбуле. Ниже два сценария с маршрутом, указателями и фото.</p>
+  <p class="lead">Посылку оставляют в ячейке хранения, а через сутки руководитель забирает её во время пересадки в Стамбуле. Ниже маршрут по шагам: указатели, ориентиры и фото.</p>
 
   <div class="flight">
     <div class="row">
@@ -178,16 +175,14 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 
   <div class="key">
     <h3>Главное, что меняет весь план</h3>
-    <p>Второй рейс <b>Стамбул → Даламан внутренний</b>. Поэтому в Стамбуле руководитель <b>в любом случае проходит турецкий паспортный контроль</b> и попадает в <b>зону внутренних вылетов</b> (гейты F1 и G). В международный транзит, где работает камера хранения iGA Left Luggage, он не попадёт.</p>
+    <p>Второй рейс <b>Стамбул → Даламан внутренний</b>. Поэтому в Стамбуле руководитель <b>в любом случае проходит турецкий паспортный контроль</b> и попадает в <b>зону внутренних вылетов</b> (гейты F1 и G). Поэтому план такой: после паспортного контроля выйти в общую зону, забрать посылку из ячейки на уровне вылета и вернуться через досмотр на внутренний рейс.</p>
     <p class="small muted">Источник: Turkish Airlines, пересадка «из-за рубежа на внутренний рейс по единому билету»: взять ручную кладь, выйти из самолёта, пройти паспортный контроль, затем к выходу на внутренний рейс; зарегистрированный багаж выдают в аэропорту назначения. Пункт паспортного контроля для пересадки «международный → внутренний» называется <b>E2</b> (iGA Fast Track).</p>
   </div>
 </header>
 
 <nav class="seg" aria-label="Разделы">
   <div class="wrap">
-    <a href="#compare">Сравнение</a>
-    <a href="#v1">Вариант 1 · в чистой зоне</a>
-    <a href="#v2">Вариант 2 · выход и обратно</a>
+    <a href="#v2">Маршрут</a>
     <a href="#drop">Кто оставляет</a>
     <a href="#price">Цены</a>
     <a href="#check">Чек-лист</a>
@@ -197,79 +192,11 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 
 <main class="wrap">
 
-<section id="compare" class="reveal">
-  <h2>Два сценария коротко</h2>
-  <div class="compare">
-    <div class="card v1">
-      <div class="vhead"><div class="vnum">1</div><h3>Ячейка в чистой зоне</h3></div>
-      <span class="tag warn">нужно подтвердить заранее</span>
-      <ul>
-        <li>Руководитель не выходит в город: паспортный контроль E2, досмотр, зона внутренних вылетов.</li>
-        <li>Самый быстрый путь: на дорогу к посылке около 1 часа запаса.</li>
-        <li>Работает, только если хранение есть <b>именно в зоне внутренних вылетов</b> и вы оставляете посылку <b>там же</b>.</li>
-      </ul>
-    </div>
-    <div class="card v2">
-      <div class="vhead"><div class="vnum">2</div><h3>Выход в общую зону и обратно</h3></div>
-      <span class="tag ok">ячейки подтверждены официально</span>
-      <ul>
-        <li>Электронные ячейки стоят на уровне вылета, в зоне регистрации, куда может прийти любой человек.</li>
-        <li>Дольше: выход через паспортный контроль, подъём наверх, обратно через досмотр.</li>
-        <li>При пересадке 3 ч реально, но без лишних остановок.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ВАРИАНТ 1 ============ -->
-<section id="v1" class="v1 reveal">
-  <div class="vhead"><div class="vnum">1</div><h2 style="margin:0">Если хранение есть в чистой зоне</h2></div>
-
-  <p>Вариант 1 работает, только если выполнены оба условия:</p>
-  <div class="cond">
-    <div><i>1.</i><span>В <b>зоне внутренних вылетов</b> (после досмотра, гейты <b>F1, G2–G11</b>) есть ячейка или камера хранения. Официально подтверждена только камера iGA Left Luggage <b>в международной зоне вылета</b> («airside of the international departures floor», за эскалаторами к iGA Lounge). Руководитель туда не попадёт.</span></div>
-    <div><i>2.</i><span>Тот, кто оставляет посылку, сам в этот день <b>находится в той же зоне внутренних вылетов</b>, например летит из IST внутренним рейсом. Из международного транзита в зону внутренних вылетов не пройти.</span></div>
-  </div>
-
-  <div class="card" style="margin:14px 0">
-    <h3>Как подтвердить заранее (5 минут)</h3>
-    <p>Позвоните или напишите в колл-центр аэропорта: <b>444 1 442</b> (круглосуточно; из-за границы +90 444 1 442, тот же номер в WhatsApp) или на <a href="mailto:ist@igairport.aero">ist@igairport.aero</a>. Готовый вопрос на английском:</p>
-    <div class="msg" id="q-en">Hello! Is there a left luggage office or self-service locker AIRSIDE in the DOMESTIC departures area (gates F1 / G) of Istanbul Airport? I will leave a package there on 15 October, and another passenger (international → domestic transfer, TK353 → TK2562 on 16 October) will pick it up. Can a different person collect it with a code/receipt? Maximum storage time and price? Thank you!</div>
-    <div class="btns"><button class="btn" data-copy="q-en">Скопировать вопрос</button><a class="btn ghost" href="https://wa.me/904441442" target="_blank" rel="noopener">WhatsApp iGA</a></div>
-  </div>
-
-  <h3 style="margin-top:22px">Маршрут руководителя</h3>
-  <ol class="steps">
-    <li>
-      <h3>Выход из самолёта → указатель «Passport control / Transfer»</h3>
-      <p>От самолёта идёте по указателю <span class="sign">Pasaport kontrol / Transfer</span>. Не путать с <span class="sign y">International Transfer</span>: он ведёт в международную зону.</p>
-      <button class="ph" data-lb><img src="img/ist-3.jpg" alt="Коридор прилёта IST с указателем Passport control / Transfer" loading="lazy" referrerpolicy="no-referrer"><span class="cap">Так выглядит коридор от самолёта: синий указатель «Pasaport kontrol / Transfer». Фото: Arne Müseler, CC BY-SA, 2019</span></button>
-    </li>
-    <li>
-      <h3>Паспортный контроль для пересадки на внутренний рейс (E2)</h3>
-      <p>Ищите указатели пересадки на внутренние рейсы: <span class="sign r">Domestic Transfer</span> / <span class="sign r">İç Hatlar</span>. Предъявить паспорт и посадочный на TK2562. Это и есть въезд в Турцию.</p>
-    </li>
-    <li>
-      <h3>Досмотр «Int. to Dom.» в центре терминала</h3>
-      <p>Пост досмотра для пересадки «международный → внутренний» находится в центральной части, ближе к правому крылу (на схеме красно-синяя полоса «Int. to Dom.»). После него вы в зоне внутренних вылетов.</p>
-      <button class="ph map" data-lb><img src="img/layout-transfer.png" alt="Схема пересадок IST: посты досмотра Int. to Int., Int. to Dom., Dom. to Int." loading="lazy"><span class="cap">Схема пересадок: «Int. to Dom.» ведёт в красную зону внутренних вылетов (F1, G). Схема: Merely another passerby, Wikimedia, CC BY-SA 4.0</span></button>
-    </li>
-    <li>
-      <h3>Точка хранения → посылка</h3>
-      <p>Идёте к точке, которую назвал колл-центр, или по фото места, которое прислал тот, кто оставил посылку. Открываете ячейку по номеру и коду или отдаёте квитанцию сотруднику.</p>
-    </li>
-    <li>
-      <h3>К гейту TK2562</h3>
-      <p>Номер гейта есть на посадочном и на табло (внутренние рейсы вылетают с F1 и G). Время окончания посадки указано на посадочном талоне.</p>
-    </li>
-  </ol>
-</section>
-
 <!-- ============ ВАРИАНТ 2 ============ -->
 <section id="v2" class="v2 reveal">
-  <div class="vhead"><div class="vnum">2</div><h2 style="margin:0">Выйти в общую зону, забрать и вернуться</h2></div>
+  <div class="vhead"><div class="vnum">✓</div><h2 style="margin:0">Маршрут: выйти в общую зону, забрать и вернуться</h2></div>
   <p>Этот вариант опирается на официальный факт: <b>электронные ячейки находятся на уровне вылета, в зоне регистрации</b> (Turkish Airlines, FAQ по IST). Туристические гиды уточняют: <b>у входов Gate 1 и Gate 6</b>. Камера хранения с сотрудниками находится этажом ниже, на прилёте, напротив выхода 13.</p>
-  <p>Паспортный контроль руководитель проходит в любом случае (рейс внутренний), поэтому выход в город не требует дополнительных документов.</p>
+  <p>Паспортный контроль руководитель проходит в любом случае (рейс внутренний), поэтому выход в общую зону не требует дополнительных документов.</p>
 
   <h3 style="margin-top:20px">Тайминг (оценка, не официальные данные)</h3>
   <div class="timeline">
@@ -357,7 +284,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 <!-- ============ ЦЕНЫ ============ -->
 <section id="price" class="reveal">
   <h2>Сколько стоит</h2>
-  <p>Официальный тариф опубликован только у <b>iGA Left Luggage</b> (за 1 место). Цены ячеек в общей зоне iGA отдельно не публикует, поэтому берите эту таблицу как ориентир.</p>
+  <p>Отдельных официальных цен на ячейки в общей зоне нет. Ориентир — опубликованный тариф камер хранения оператора аэропорта iGA (за 1 место, за 24 часа).</p>
   <div class="tablewrap">
     <table>
       <thead><tr><th>Размер</th><th>В долларах</th><th>Оригинал</th></tr></thead>
@@ -393,7 +320,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   <ul class="sources">
     <li><a href="https://www.turkishairlines.com/en-int/any-questions/transfer-transit-passengers/" target="_blank" rel="noopener">Turkish Airlines: Transfer &amp; transit passengers</a>: пересадка «из-за рубежа на внутренний рейс», паспортный контроль, багаж выдают в аэропорту назначения.</li>
     <li><a href="https://www.turkishairlines.com/en-us/istanbul-airport/faq/" target="_blank" rel="noopener">Turkish Airlines: Istanbul Airport FAQ</a>: электронные ячейки на уровне вылета в зоне регистрации, камеры хранения на уровне прилёта.</li>
-    <li><a href="https://www.igapass.com/en/iga-left-luggage-p-4001" target="_blank" rel="noopener">iGA Left Luggage</a>: international departures floor (airside), за эскалаторами к iGA Lounge, 24/7, тарифы.</li>
+    <li><a href="https://www.igapass.com/en/iga-left-luggage-p-4001" target="_blank" rel="noopener">iGA Left Luggage</a>: тарифы камер хранения (ориентир по ценам).</li>
     <li><a href="https://www.istairport.com/en/feedback-form" target="_blank" rel="noopener">istairport.com</a>: колл-центр 444 1 442, 24/7.</li>
     <li><a href="https://istanbul-ist-international-airport.com/istanbul-international-airport-luggage-storage/" target="_blank" rel="noopener">Неофициальный гид по IST</a>: ячейки у Gates 1 и 6 на уровне вылета, камера хранения напротив Exit 13. <span class="muted">Сторонний источник.</span></li>
     <li><a href="https://commons.wikimedia.org/wiki/File:IST_airport_terminal_layout_(transfer).png" target="_blank" rel="noopener">Схемы терминала IST (Wikimedia Commons)</a>: схемы составлены пользователями Wikimedia, это не официальные планы аэропорта.</li>
@@ -402,16 +329,15 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   <div class="card" style="margin-top:16px">
     <h3>Что не удалось подтвердить</h3>
     <ul>
-      <li>Есть ли хранение в <b>зоне внутренних вылетов</b> (для варианта 1). Нужен звонок в 444 1 442.</li>
       <li>Точное место ячеек (гиды называют Gate 1 и 6) и их отдельные цены: официальных данных нет.</li>
-      <li>Тайминг варианта 2 — моя оценка, а не официальные нормы.</li>
+      <li>Тайминг — моя оценка, а не официальные нормы.</li>
     </ul>
   </div>
 </section>
 </main>
 
 <footer class="wrap">
-  Фото терминала: Arne Müseler (Wikimedia Commons, CC BY-SA 3.0 de / 4.0). Схемы: Merely another passerby (CC BY-SA 4.0). Котик: Catboy69, «Cat in a box 3» (CC0). Данные проверены 08.10.2026.
+  Фото терминала: Arne Müseler (Wikimedia Commons, CC BY-SA 3.0 de / 4.0). Схема: Merely another passerby (CC BY-SA 4.0). Котик: Catboy69, «Cat in a box 3» (CC0). Данные проверены 08.10.2026.
 </footer>
 
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр фото">
