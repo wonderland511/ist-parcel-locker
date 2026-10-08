@@ -103,11 +103,6 @@ ol.steps>li:last-child::after{display:none}
 .ph.map img{aspect-ratio:auto;object-fit:contain;background:#fff}
 .cap{display:block;padding:8px 12px;font-size:13px;color:var(--muted);background:var(--card)}
 
-.timeline{margin:16px 0;border-radius:20px;overflow:hidden;border:1px solid var(--line)}
-.timeline .t{display:grid;grid-template-columns:118px 1fr;gap:12px;padding:12px 16px;background:var(--card);border-bottom:1px solid var(--line);align-items:center}
-.timeline .t:last-child{border-bottom:none}
-.timeline .t b{font-variant-numeric:tabular-nums}
-.timeline .t.hot{background:linear-gradient(90deg,rgba(255,90,95,.14),var(--card))}
 
 table{width:100%;border-collapse:collapse;font-size:15px}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
@@ -146,8 +141,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   .save{grid-template-columns:1fr 1fr}
   .flight .pt b{font-size:22px}
   .flight .mid .bar{width:40px}
-  .timeline .t{grid-template-columns:92px 1fr;font-size:15px}
-  ol.steps>li{padding-left:52px}
+    ol.steps>li{padding-left:52px}
   .sticker{width:96px;height:96px}
 }
 </style>
@@ -197,18 +191,6 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   <div class="vhead"><div class="vnum">✓</div><h2 style="margin:0">Маршрут: выйти в общую зону, забрать и вернуться</h2></div>
   <p>Маршрут опирается на официальный факт: <b>электронные ячейки находятся на уровне вылета, в зоне регистрации</b> (Turkish Airlines, FAQ по IST). Туристические гиды уточняют: <b>у входов Gate 1 и Gate 6</b>. Камера хранения с сотрудниками находится этажом ниже, на прилёте, напротив выхода 13.</p>
   <p>Паспортный контроль руководитель проходит в любом случае (рейс внутренний), поэтому выход в общую зону не требует дополнительных документов.</p>
-
-  <h3 style="margin-top:20px">Тайминг (оценка, не официальные данные)</h3>
-  <div class="timeline">
-    <div class="t"><b>13:10</b><span>Посадка в IST. Выход из самолёта, путь до паспортного контроля: в IST идти далеко, 15–30 мин</span></div>
-    <div class="t"><b>~13:40</b><span>Паспортный контроль на прилёте: зависит от очереди, 10–40 мин</span></div>
-    <div class="t"><b>~14:10</b><span>Багажный зал: <b>ничего не забирать</b>, чемодан едет до Даламана. Зелёный коридор → зал встречающих</span></div>
-    <div class="t hot"><b>~14:20</b><span>Подъём на уровень вылета → ячейки → посылка в руках</span></div>
-    <div class="t"><b>~14:40</b><span>Вход в терминал через рамку → досмотр в зону внутренних вылетов</span></div>
-    <div class="t hot"><b>до ~15:20</b><span>Быть в зоне внутренних вылетов. Дальше пешком до гейта G (крыло длинное)</span></div>
-    <div class="t"><b>16:10</b><span>Вылет TK2562. Окончание посадки — время на посадочном</span></div>
-  </div>
-  <p class="small muted">Точка невозврата: если в <b>~14:45</b> руководитель ещё не у ячеек (например, очень длинная очередь на паспортном контроле), надёжнее сразу идти на досмотр и не рисковать рейсом. Ячейку тогда можно продлить или забрать позже.</p>
 
   <h3 style="margin-top:22px">Маршрут руководителя</h3>
   <ol class="steps">
@@ -276,8 +258,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 Оплачено до: ___
 
 Ваш план 16.10: TK353 прилёт 13:10 → забрать посылку → TK2562 в 16:10 (внутренний, гейты F1/G).
-Не идите в «International Transfer». Ваш путь: Passport control → Arrivals → наверх на Departures.
-Если к 14:45 вы ещё не у ячеек, идите сразу на досмотр, рейс важнее.</div>
+Не идите в «International Transfer». Ваш путь: Passport control → Arrivals → наверх на Departures.</div>
   <div class="btns"><button class="btn" data-copy="msg">Скопировать сообщение</button></div>
 </section>
 
@@ -330,7 +311,6 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
     <h3>Что не удалось подтвердить</h3>
     <ul>
       <li>Точное место ячеек (гиды называют Gate 1 и 6) и их отдельные цены: официальных данных нет.</li>
-      <li>Тайминг — моя оценка, а не официальные нормы.</li>
     </ul>
   </div>
 </section>
