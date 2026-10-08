@@ -176,9 +176,7 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
 <nav class="seg" aria-label="Разделы">
   <div class="wrap">
     <a href="#v2">Маршрут</a>
-    <a href="#drop">Кто оставляет</a>
     <a href="#price">Цены</a>
-    <a href="#check">Чек-лист</a>
     <a href="#src">Источники</a>
   </div>
 </nav>
@@ -229,38 +227,9 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   </ol>
 </section>
 
-<!-- ============ КТО ОСТАВЛЯЕТ ============ -->
-<section id="drop" class="reveal">
-  <h2>Для того, кто оставляет посылку</h2>
-  <ol class="steps">
-    <li><h3>Уровень вылета (Departures / Giden Yolcu), зона регистрации</h3><p>Посылку оставить в ячейке <b>у входа Entrance 6</b>: внутри, у входа в зал регистрации, в общей зоне до досмотра.</p></li>
-    <li><h3>Терминал ячеек: следовать инструкции на экране</h3><p>Выбрать размер, оплатить, положить пакет и закрыть. Срок: посылка лежит больше 24 часов (с 15-го до ~14:00 16-го), поэтому сразу <b>оплатите двое суток</b> или уточните на экране, как работает продление.</p></li>
-    <li><h3>Сразу всё сохранить и отправить руководителю</h3></li>
-  </ol>
-
-  <div class="sticker-row"><img class="sticker" src="img/sticker-cat.jpg" alt="Милый котик в коробке" width="118" height="118"></div>
-
-  <div class="save">
-    <div><span>#</span>Номер ячейки и блока</div>
-    <div><span>🔑</span>Код / PIN / QR</div>
-    <div><span>📷</span>Фото ячейки и ближайшего входа с номером</div>
-    <div><span>🧾</span>Чек / квитанция</div>
-  </div>
-
-  <h3 style="margin:18px 0 8px">Шаблон сообщения руководителю</h3>
-  <div class="msg" id="msg">Посылка в IST, ячейка хранения.
-Где: уровень вылета (Departures), зона регистрации, у входа Entrance 6.
-Ячейка №: ___  Код/PIN: ___
-Фото места: (прикрепляю)
-Оплачено до: ___
-
-Ваш план 16.10: TK353 прилёт 13:10 → забрать посылку → TK2562 в 16:10 (внутренний, гейты F1/G).
-Не идите в «International Transfer». Ваш путь: Passport control → Arrivals → наверх на Departures.</div>
-  <div class="btns"><button class="btn" data-copy="msg">Скопировать сообщение</button></div>
-</section>
-
 <!-- ============ ЦЕНЫ ============ -->
 <section id="price" class="reveal">
+  <div class="sticker-row"><img class="sticker" src="img/sticker-cat.jpg" alt="Милый котик в коробке" width="118" height="118"></div>
   <h2>Сколько стоит</h2>
   <p>Отдельных официальных цен на ячейки в общей зоне нет. Ориентир — опубликованный тариф камер хранения оператора аэропорта iGA (за 1 место, за 24 часа).</p>
   <div class="tablewrap">
@@ -278,21 +247,6 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
   <p class="small muted">Курс ЦБ Турции (TCMB) на 08.10.2026: 1 $ = 49,1267 ₺ (покупка). Расчёт: ₺ ÷ 49,1267. Цены с НДС, с сайта igapass.com. Гид istanbul-ist-international-airport.com указывает, что тариф считается за каждые 24 часа и жёсткого максимума нет.</p>
 </section>
 
-<!-- ============ ЧЕК-ЛИСТ ============ -->
-<section id="check" class="reveal">
-  <h2>Чек-лист руководителю перед вылетом из Алматы</h2>
-  <ul class="checklist">
-    <li>На регистрации в Алматы попросить <b>оба посадочных</b> (TK353 и TK2562), чтобы в Стамбуле не идти на стойку.</li>
-    <li>Проверить по бирке, что чемодан оформлен <b>до DLM (Даламан)</b>.</li>
-    <li>Сохранить офлайн номер ячейки, код и фото места.</li>
-    <li>Установить приложение Turkish Airlines: там гейт и время посадки.</li>
-    <li>Посылку везти в ручной клади: на досмотре её просветят, поэтому в ней не должно быть запрещённого (жидкости больше 100 мл, острые предметы).</li>
-    <li>На всякий случай записать колл-центр аэропорта: <b>444 1 442</b> (+90 444 1 442).</li>
-  </ul>
-  <p><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=41.26222,28.72778" target="_blank" rel="noopener">Аэропорт IST на Google Картах</a></p>
-  <p class="small muted">Точка — координаты аэропорта из Википедии (41.26222, 28.72778); положение приблизительное, это не конкретный вход.</p>
-</section>
-
 <section id="src" class="reveal">
   <h2>Источники</h2>
   <ul class="sources">
@@ -303,12 +257,6 @@ footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
     <li><a href="https://istanbul-ist-international-airport.com/istanbul-international-airport-luggage-storage/" target="_blank" rel="noopener">Неофициальный гид по IST</a>: ячейки у Gates 1 и 6 на уровне вылета, камера хранения напротив Exit 13. <span class="muted">Сторонний источник.</span></li>
     <li><a href="https://www.tcmb.gov.tr/kurlar/today.xml" target="_blank" rel="noopener">TCMB</a>: курс USD/TRY на 08.10.2026.</li>
   </ul>
-  <div class="card" style="margin-top:16px">
-    <h3>Что не удалось подтвердить</h3>
-    <ul>
-      <li>Отдельные цены ячеек: официальных данных нет.</li>
-    </ul>
-  </div>
 </section>
 </main>
 
